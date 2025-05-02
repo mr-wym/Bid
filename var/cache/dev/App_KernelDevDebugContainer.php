@@ -16,7 +16,7 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerLBcusCJ\App_KernelDevDebugContainer([
     'container.build_hash' => 'LBcusCJ',
-    'container.build_id' => 'd54b46a6',
-    'container.build_time' => 1746180392,
+    'container.build_id' => '3d006a50',
+    'container.build_time' => 1746203022,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerLBcusCJ');

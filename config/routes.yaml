@@ -1,0 +1,19 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+login:
+  path: /{userId}/login
+  controller: App\Controller\LoginController::login
+
+post_bid:
+  path: /{itemId}/bid
+  controller: App\Controller\BidController::postBid
+  methods: POST
+
+top_bids:
+  path: /{itemId}/topBidList
+  controller: App\Controller\BidController::getTopBids
+  methods: GET

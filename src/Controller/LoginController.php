@@ -23,7 +23,7 @@ class LoginController extends AbstractController
     {
         $sessionKey = $this->sessionManager->createSession($userId);
 
-        $cookie = new Cookie('sessionKey', $sessionKey, time() + 3600,'/sessionKey', null, false, true); // ici remplacer 3600 par 600 pour 10 minutes
+        $cookie = new Cookie('sessionKey', json_encode(['key' => $sessionKey, 'userId' => $userId]), time() + 600, '/', null, false, true);
 
         $response = new JsonResponse([
             'userId' => $userId,
