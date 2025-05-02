@@ -21,7 +21,7 @@ return [
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        60 => [[['_route' => 'login', '_controller' => 'App\\Controller\\BidController::login'], ['userId'], null, null, false, false, null]],
+        60 => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::login'], ['userId'], null, null, false, false, null]],
         70 => [[['_route' => 'post_bid', '_controller' => 'App\\Controller\\BidController::postBid'], ['itemId'], ['POST' => 0], null, false, false, null]],
         87 => [
             [['_route' => 'top_bids', '_controller' => 'App\\Controller\\BidController::getTopBids'], ['itemId'], ['GET' => 0], null, false, false, null],

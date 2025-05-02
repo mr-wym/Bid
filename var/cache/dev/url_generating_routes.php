@@ -4,4 +4,9 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'login' => [['userId'], ['_controller' => 'App\\Controller\\LoginController::login'], [], [['text', '/login'], ['variable', '/', '[^/]++', 'userId', true]], [], [], []],
+    'post_bid' => [['itemId'], ['_controller' => 'App\\Controller\\BidController::postBid'], [], [['text', '/bid'], ['variable', '/', '[^/]++', 'itemId', true]], [], [], []],
+    'top_bids' => [['itemId'], ['_controller' => 'App\\Controller\\BidController::getTopBids'], [], [['text', '/topBidList'], ['variable', '/', '[^/]++', 'itemId', true]], [], [], []],
+    'App\Controller\BidController::postBid' => [['itemId'], ['_controller' => 'App\\Controller\\BidController::postBid'], [], [['text', '/bid'], ['variable', '/', '[^/]++', 'itemId', true]], [], [], []],
+    'App\Controller\LoginController::login' => [['userId'], ['_controller' => 'App\\Controller\\LoginController::login'], [], [['text', '/login'], ['variable', '/', '[^/]++', 'userId', true]], [], [], []],
 ];
