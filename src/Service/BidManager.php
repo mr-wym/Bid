@@ -16,10 +16,6 @@ class BidManager
         $this->filePath = sys_get_temp_dir() . '/BidApi/bid.json';
     }
 
-    public function isDoubleBid($bid): bool {
-        return is_double($bid);
-    }
-
     public function addBid(int $itemId, int $userId, float $bidValue): void {
 
         $existingData = file_exists($this->filePath)

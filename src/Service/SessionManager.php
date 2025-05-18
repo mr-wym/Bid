@@ -34,7 +34,6 @@ class SessionManager
             foreach ($data as $entry) {
                 if (isset($entry['userId']) && $entry['userId'] === $userId) {
                     $expiresAt = \DateTime::createFromFormat('Y-m-d H:i:s', $entry['expiresAt']);
-                    error_log("expiresAt: " . $expiresAt->format('Y-m-d H:i:s'));
                     if ($expiresAt !== false && $expiresAt >= new \DateTime()) {
                         return true;
                     } else {
@@ -53,11 +52,7 @@ class SessionManager
             $existingData = json_decode(file_get_contents($this->filePath), true) ?? [];
 
             foreach ($existingData as $entry) {
-                error_log("ici");
-
                 if (isset($entry['sessionKey']) && $entry['sessionKey'] === $sessionKey) {
-                    error_log("là");
-
                     if (isset($entry['expiresAt'])) {
                         $expiresAt = \DateTime::createFromFormat('Y-m-d H:i:s', $entry['expiresAt']);
                         if ($expiresAt === false || $expiresAt < new \DateTime()) {
